@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const InternshipSchema = new mongoose.Schema({
   role_title: String,
   description: String,
-  skills_required: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Skill' }],
+  skills_required: [{ type: String }],
   duration: String,
   location: String,
   stipend: String,

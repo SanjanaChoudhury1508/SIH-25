@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
 const ApplicationSchema = new mongoose.Schema({
-  student_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Student' },
-  internship_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Internship' },
+  student_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Student', required:true },
+  internship_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Internship', required:true },
   status: {
     type: String,
-    enum: ['Applied', 'Shortlisted', 'Rejected', 'Completed'],
+    enum: ['Applied', 'Shortlisted', 'Rejected', 'Completed', 'Allocated'],
     default: 'Applied'
   },
   date_applied: { type: Date, default: Date.now },
   supervisor_feedback: String,
   admin_notes: String,
   final_decision: String,
-  score: Number
+  score: {type:Number, default:0},
 });
 
 module.exports = mongoose.model('Application', ApplicationSchema);

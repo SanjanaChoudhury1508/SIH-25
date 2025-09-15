@@ -20,6 +20,8 @@ app.use('/api/applications', require('./routes/applicationRoutes'));
 app.use('/api/supervisors', require('./routes/supervisorRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
+app.get('/', (req, res) => res.send('Internship Allocation Backend running'));
+
 // Error handler
 app.use(errorHandler);
 

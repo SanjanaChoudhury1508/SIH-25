@@ -6,6 +6,7 @@ const SupervisorSchema = new mongoose.Schema({
   institution: String,
   email: { type: String, unique: true },
   phone_number: String,
+  password: { type: String, required: true },
   assigned_internships: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Internship' }]
 });
 

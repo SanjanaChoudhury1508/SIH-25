@@ -21,7 +21,7 @@ const provideFeedback = asyncHandler(async (req, res) => {
     throw new Error('Application not found');
   }
 
-  application.supervisor_feedback = feedback;
+  application.supervisor_feedback = feedback || application.supervisor_feedback;
   if (status) application.status = status;
 
   const updated = await application.save();
