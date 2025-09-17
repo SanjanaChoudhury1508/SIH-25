@@ -1,0 +1,15 @@
+{
+  "student": {
+    "name": "Rashi",
+    "cgpa": 8.5,
+    "skills": ["React", "Node.js", "MongoDB"],
+    "experience": 1,
+    "interests": ["Web Development"]
+  },
+  "internship": {
+    "title": "Full-Stack Developer Intern",
+    "requiredSkills": ["React", "Node.js"],
+    "minCgpa": 8.0,
+    "category": "Software Development"
+  }
+}
